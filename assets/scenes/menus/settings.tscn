@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://source/menus/settings.gd" type="Script" id=1]
+
+[node name="CenterContainer" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 608.0
+margin_top = 340.0
+margin_right = 671.0
+margin_bottom = 380.0
+
+[node name="ButtonBack" type="Button" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 56.0
+margin_bottom = 33.0
+text = "Back"
