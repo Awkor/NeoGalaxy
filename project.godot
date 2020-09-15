@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="NeoGalaxy"
+run/main_scene="res://assets/scenes/menus/main.tscn"
 config/icon="res://assets/icon.png"
 
 [display]
