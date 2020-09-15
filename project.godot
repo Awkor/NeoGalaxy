@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="NeoGalaxy"
 config/icon="res://assets/icon.png"
 
+[gui]
+
+theme/custom="res://assets/theme.tres"
+
 [rendering]
 
 environment/default_environment="res://assets/default_environment.tres"
