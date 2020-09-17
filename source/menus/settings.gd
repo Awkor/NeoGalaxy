@@ -5,8 +5,8 @@ onready var main_menu: PackedScene = load("res://assets/scenes/menus/main.tscn")
 
 
 func _ready() -> void:
-	back_button.connect("button_up", self, "_on_ButtonBack_button_up")
+	back_button.connect("pressed", self, "_on_ButtonBack_pressed")
 
 
-func _on_ButtonBack_button_up() -> void:
+func _on_ButtonBack_pressed() -> void:
 	get_tree().change_scene_to(main_menu)
