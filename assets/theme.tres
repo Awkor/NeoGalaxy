@@ -1,6 +1,24 @@
-[gd_resource type="Theme" load_steps=2 format=2]
+[gd_resource type="Theme" load_steps=8 format=2]
 
 [ext_resource path="res://assets/fonts/inter_regular.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/styles/style_button_disabled.tres" type="StyleBox" id=2]
+[ext_resource path="res://assets/styles/style_button_focus.tres" type="StyleBox" id=3]
+[ext_resource path="res://assets/styles/style_button_hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://assets/styles/style_button_normal.tres" type="StyleBox" id=5]
+[ext_resource path="res://assets/styles/style_button_pressed.tres" type="StyleBox" id=6]
+[ext_resource path="res://assets/styles/style_panel_container.tres" type="StyleBox" id=7]
 
 [resource]
 default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 0.913725, 0.92549, 0.937255, 1 )
+Button/colors/font_color_disabled = Color( 0.203922, 0.227451, 0.25098, 1 )
+Button/colors/font_color_hover = Color( 0.945098, 0.952941, 0.960784, 1 )
+Button/colors/font_color_pressed = Color( 0.972549, 0.976471, 0.980392, 1 )
+Button/constants/hseparation = 0
+Button/fonts/font = null
+Button/styles/disabled = ExtResource( 2 )
+Button/styles/focus = ExtResource( 3 )
+Button/styles/hover = ExtResource( 4 )
+Button/styles/normal = ExtResource( 5 )
+Button/styles/pressed = ExtResource( 6 )
+PanelContainer/styles/panel = ExtResource( 7 )
