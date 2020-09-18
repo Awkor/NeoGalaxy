@@ -1,8 +1,12 @@
 extends Node
 
-onready var button_quit := $PanelContainer/VBoxContainer/ButtonQuit
-onready var button_settings := $PanelContainer/VBoxContainer/ButtonSettings
-onready var settings_menu: PackedScene = load("res://assets/scenes/menus/settings.tscn")
+export (NodePath) var path_button_quit
+export (NodePath) var path_button_settings
+
+onready var button_quit := get_node(path_button_quit)
+onready var button_settings := get_node(path_button_settings)
+
+onready var settings_menu: PackedScene = load("res://scenes/menus/settings.tscn")
 
 
 func _ready() -> void:
