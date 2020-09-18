@@ -12,7 +12,7 @@ onready var check_box_borderless := get_node(path_check_box_borderless)
 onready var check_box_fullscreen := get_node(path_check_box_fullscreen)
 onready var check_box_vertical_synchronization := get_node(path_check_box_vertical_synchronization)
 
-onready var main_menu := load("res://assets/scenes/menus/main.tscn")
+onready var main_menu := load("res://scenes/menus/main.tscn")
 
 
 func _ready() -> void:
