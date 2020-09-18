@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://source/menus/main.gd" type="Script" id=1]
+
+[node name="CenterContainer" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+path_button_play = NodePath("PanelContainer/MarginContainer/VBoxContainer/ButtonPlay")
+path_button_quit = NodePath("PanelContainer/MarginContainer/VBoxContainer/ButtonQuit")
+path_button_settings = NodePath("PanelContainer/MarginContainer/VBoxContainer/ButtonSettings")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 471.0
+margin_top = 229.0
+margin_right = 553.0
+margin_bottom = 371.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 81.0
+margin_bottom = 141.0
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 76.0
+margin_bottom = 136.0
+
+[node name="ButtonPlay" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 72.0
+margin_bottom = 30.0
+text = "Play"
+
+[node name="ButtonDisabled" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 72.0
+margin_bottom = 64.0
+disabled = true
+text = "Disabled"
+
+[node name="ButtonSettings" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 72.0
+margin_bottom = 98.0
+text = "Settings"
+
+[node name="ButtonQuit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 102.0
+margin_right = 72.0
+margin_bottom = 132.0
+text = "Quit"
