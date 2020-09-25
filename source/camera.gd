@@ -26,7 +26,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	var zoom_in := false
 	var zoom_out := false
 	if event is InputEventMouseButton:
-		rotate = event.button_index == BUTTON_LEFT and event.pressed
+		if event.button_index == BUTTON_LEFT:
+			rotate = event.pressed
 		zoom_in = event.button_index == BUTTON_WHEEL_DOWN
 		zoom_out = event.button_index == BUTTON_WHEEL_UP
 	elif event is InputEventMouseMotion:
