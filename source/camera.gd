@@ -1,5 +1,8 @@
 extends Spatial
 
+export (NodePath) var path_camera
+export (NodePath) var path_spring_arm
+
 var fov_change := 2.0
 var fov_default := 70.0
 var fov_maximum := 90.0
@@ -22,10 +25,10 @@ var zoom_scale := 0.5
 var zoom_smooth := true
 var zoom_stiffness := 10.0
 
-onready var camera: Camera = $SpringArm/Camera
+onready var camera: Camera = get_node(path_camera)
 onready var camera_fov_target := camera.fov
 
-onready var spring_arm: SpringArm = $SpringArm
+onready var spring_arm: SpringArm = get_node(path_spring_arm)
 onready var spring_arm_length_target := spring_arm.spring_length
 
 onready var rotation_angle_target_horizontal := spring_arm.rotation.x

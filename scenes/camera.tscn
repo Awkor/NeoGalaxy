@@ -4,6 +4,8 @@
 
 [node name="Camera" type="Spatial"]
 script = ExtResource( 1 )
+path_camera = NodePath("SpringArm/Camera")
+path_spring_arm = NodePath("SpringArm")
 
 [node name="SpringArm" type="SpringArm" parent="."]
 collision_mask = 0
