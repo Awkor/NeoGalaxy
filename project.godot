@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "PanelContainer",
+"class": "TitledPanelContainer",
+"language": "GDScript",
+"path": "res://source/titled_panel_container.gd"
+} ]
 _global_script_class_icons={
-
+"TitledPanelContainer": "res://assets/icons/titled_panel_container.svg"
 }
 
 [application]
