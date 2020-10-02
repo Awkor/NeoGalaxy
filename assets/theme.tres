@@ -7,8 +7,8 @@
 [ext_resource path="res://assets/styles/style_button_normal.tres" type="StyleBox" id=5]
 [ext_resource path="res://assets/styles/style_button_pressed.tres" type="StyleBox" id=6]
 [ext_resource path="res://assets/styles/style_panel_container.tres" type="StyleBox" id=7]
-[ext_resource path="res://assets/check_box_checked.png" type="Texture" id=8]
-[ext_resource path="res://assets/check_box_unchecked.png" type="Texture" id=9]
+[ext_resource path="res://assets/textures/check_box_checked.png" type="Texture" id=8]
+[ext_resource path="res://assets/textures/check_box_unchecked.png" type="Texture" id=9]
 [ext_resource path="res://assets/styles/style_check_box_focus.tres" type="StyleBox" id=10]
 
 [resource]
