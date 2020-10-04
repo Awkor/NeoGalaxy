@@ -23,7 +23,6 @@ func _ready():
 	margin_container_bottom.set("custom_constants/margin_left", margin_container_bottom_margin)
 	margin_container_bottom.set("custom_constants/margin_right", margin_container_bottom_margin)
 	margin_container_bottom.set("custom_constants/margin_top", margin_container_bottom_margin)
-
 	title_background.color = style.border_color
 	title_label.size_flags_horizontal |= SIZE_EXPAND
 	title_label.text = title
@@ -31,7 +30,6 @@ func _ready():
 	title_margin_container.set("custom_constants/margin_left", title_margin)
 	title_margin_container.set("custom_constants/margin_right", title_margin)
 	title_margin_container.set("custom_constants/margin_top", title_margin)
-
 	v_box_container.add_constant_override("separation", v_box_container_separation)
 
 	add_child(v_box_container)
