@@ -16,10 +16,10 @@ path_button_quit = NodePath("PanelContainer/MarginContainer/VBoxContainer/Button
 path_button_settings = NodePath("PanelContainer/MarginContainer/VBoxContainer/ButtonSettings")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-margin_left = 471.0
-margin_top = 229.0
-margin_right = 553.0
-margin_bottom = 371.0
+margin_left = 599.0
+margin_top = 289.0
+margin_right = 681.0
+margin_bottom = 431.0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 margin_left = 1.0
