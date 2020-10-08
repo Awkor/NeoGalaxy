@@ -24,6 +24,10 @@ config/name="NeoGalaxy"
 run/main_scene="res://scenes/menus/main.tscn"
 config/icon="res://assets/icon.png"
 
+[display]
+
+window/size/resizable=false
+
 [gui]
 
 theme/custom="res://assets/theme.tres"
