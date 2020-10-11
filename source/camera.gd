@@ -10,6 +10,17 @@ var fov_minimum := 50.0
 var fov_smooth := true
 var fov_stiffness := 10.0
 
+var movement_direction := Vector3.ZERO
+var movement_direction_map := {
+	KEY_A: Vector3.LEFT,
+	KEY_D: Vector3.RIGHT,
+	KEY_KP_ADD: Vector3.UP,
+	KEY_KP_SUBTRACT: Vector3.DOWN,
+	KEY_S: Vector3.BACK,
+	KEY_W: Vector3.FORWARD
+}
+var movement_speed := 1024.0
+
 var rotate := false
 var rotation_scale := 0.03
 var rotation_smooth := true
@@ -54,6 +65,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			var rotation_angle_change_vertical: float = -event.relative.y * rotation_scale
 			rotation_angle_target_horizontal = rotation.y + rotation_angle_change_horizontal
 			rotation_angle_target_vertical = spring_arm.rotation.x + rotation_angle_change_vertical
+	elif event is InputEventKey:
+		var key: int = event.scancode
+		if movement_direction_map.has(key):
+			if event.pressed and event.echo == false:
+				movement_direction += movement_direction_map[key]
+			elif event.pressed == false:
+				movement_direction -= movement_direction_map[key]
 	if zoom_in or zoom_out:
 		var zoom_direction := 1 if zoom_in else -1
 		var spring_arm_length_change := spring_arm.spring_length * zoom_scale * zoom_direction
@@ -61,7 +79,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _process(delta: float) -> void:
-	transform.origin = target.transform.origin
+	if target:
+		transform.origin = target.transform.origin
+	else:
+		translate(movement_direction * movement_speed * delta)
 	_rotate_horizontally(rotation_angle_target_horizontal, delta)
 	_rotate_vertically(rotation_angle_target_vertical, delta)
 	_update_fov(camera_fov_target, delta)
