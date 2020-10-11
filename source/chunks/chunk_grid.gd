@@ -5,7 +5,7 @@ var chunks := []
 var size := 16
 
 
-func _init():
+func _init() -> void:
 	for x in range(size):
 		chunks.append([])
 		for y in range(size):

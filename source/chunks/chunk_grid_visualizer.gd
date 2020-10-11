@@ -2,13 +2,13 @@ extends Spatial
 
 export (NodePath) var chunk_grid_path
 
-var chunk_color = Color.green
-var chunk_alpha = 0.1
+var chunk_color := Color.green
+var chunk_alpha := 0.1
 
-onready var chunk_grid = get_node(chunk_grid_path)
+onready var chunk_grid: ChunkGrid = get_node(chunk_grid_path)
 
 
-func _ready():
+func _ready() -> void:
 	for row in chunk_grid.chunks:
 		for column in row:
 			for chunk in column:
