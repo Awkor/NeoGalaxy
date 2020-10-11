@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://source/chunks/chunk.gd"
 }, {
 "base": "Spatial",
+"class": "ChunkAssigner",
+"language": "GDScript",
+"path": "res://source/chunks/chunk_assigner.gd"
+}, {
+"base": "Spatial",
 "class": "ChunkGrid",
 "language": "GDScript",
 "path": "res://source/chunks/chunk_grid.gd"
@@ -26,6 +31,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Chunk": "",
+"ChunkAssigner": "",
 "ChunkGrid": "",
 "TitledPanelContainer": "res://assets/icons/titled_panel_container.svg"
 }
