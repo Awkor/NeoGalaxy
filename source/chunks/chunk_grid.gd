@@ -13,8 +13,8 @@ func _init() -> void:
 			for z in range(size):
 				var chunk := Chunk.new()
 				chunk.set_coordinate(x, y, z)
-				chunk.translation.x = chunk.coordinate.x * chunk.SIZE
-				chunk.translation.y = chunk.coordinate.y * chunk.SIZE
-				chunk.translation.z = chunk.coordinate.z * chunk.SIZE
+				chunk.translation.x = x * chunk.SIZE
+				chunk.translation.y = y * chunk.SIZE
+				chunk.translation.z = z * chunk.SIZE
 				chunks[x][y].append(chunk)
 				add_child(chunk)
