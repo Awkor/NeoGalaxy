@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window_button_minimize_hover.png-74c5ce41e7e2a4d10de6a15548835630.stex"
+path="res://.import/window_button_close_hover.png-608ac0c82764915df661501b380bded9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/window_button_minimize_hover.png"
-dest_files=[ "res://.import/window_button_minimize_hover.png-74c5ce41e7e2a4d10de6a15548835630.stex" ]
+source_file="res://assets/textures/gui/window_button_close_hover.png"
+dest_files=[ "res://.import/window_button_close_hover.png-608ac0c82764915df661501b380bded9.stex" ]
 
 [params]
 

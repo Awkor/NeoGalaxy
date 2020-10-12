@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window_button_minimize_focused.png-b6e72d57e474bd33880dd7100b2c46d1.stex"
+path="res://.import/check_box_unchecked.png-fcb4dc9543d9ad50694ead8d722ea306.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/window_button_minimize_focused.png"
-dest_files=[ "res://.import/window_button_minimize_focused.png-b6e72d57e474bd33880dd7100b2c46d1.stex" ]
+source_file="res://assets/textures/gui/check_box_unchecked.png"
+dest_files=[ "res://.import/check_box_unchecked.png-fcb4dc9543d9ad50694ead8d722ea306.stex" ]
 
 [params]
 

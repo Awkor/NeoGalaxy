@@ -27,7 +27,7 @@ _global_script_classes=[ {
 "base": "PanelContainer",
 "class": "TitledPanelContainer",
 "language": "GDScript",
-"path": "res://source/titled_panel_container.gd"
+"path": "res://source/gui/titled_panel_container.gd"
 }, {
 "base": "TitledPanelContainer",
 "class": "Window",

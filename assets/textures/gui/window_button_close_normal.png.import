@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window_button_minimize_normal.png-27b523b810c53d388f9bebd53ceeccd0.stex"
+path="res://.import/window_button_close_normal.png-7df4a105e7d275df16ccf1a2da07e0b1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/window_button_minimize_normal.png"
-dest_files=[ "res://.import/window_button_minimize_normal.png-27b523b810c53d388f9bebd53ceeccd0.stex" ]
+source_file="res://assets/textures/gui/window_button_close_normal.png"
+dest_files=[ "res://.import/window_button_close_normal.png-7df4a105e7d275df16ccf1a2da07e0b1.stex" ]
 
 [params]
 
