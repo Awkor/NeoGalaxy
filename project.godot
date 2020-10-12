@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "TitledPanelContainer",
 "language": "GDScript",
 "path": "res://source/titled_panel_container.gd"
+}, {
+"base": "TitledPanelContainer",
+"class": "Window",
+"language": "GDScript",
+"path": "res://source/gui/window.gd"
 } ]
 _global_script_class_icons={
 "Chunk": "",
 "ChunkAssigner": "",
 "ChunkGrid": "",
-"TitledPanelContainer": "res://assets/icons/titled_panel_container.svg"
+"TitledPanelContainer": "res://assets/icons/titled_panel_container.svg",
+"Window": "res://assets/icons/window.svg"
 }
 
 [application]
