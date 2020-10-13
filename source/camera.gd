@@ -53,8 +53,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.button_index == BUTTON_LEFT:
 			rotate = event.pressed
 		if Input.is_key_pressed(KEY_ALT):
-			camera_fov_target += fov_change if event.button_index == BUTTON_WHEEL_UP else 0
-			camera_fov_target -= fov_change if event.button_index == BUTTON_WHEEL_DOWN else 0
+			camera_fov_target += fov_change if event.button_index == BUTTON_WHEEL_UP else 0.0
+			camera_fov_target -= fov_change if event.button_index == BUTTON_WHEEL_DOWN else 0.0
 			camera_fov_target = clamp(camera_fov_target, fov_minimum, fov_maximum)
 		else:
 			zoom_in = event.button_index == BUTTON_WHEEL_DOWN
