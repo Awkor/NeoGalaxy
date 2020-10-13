@@ -10,6 +10,8 @@
 [ext_resource path="res://assets/textures/gui/check_box_checked.png" type="Texture" id=8]
 [ext_resource path="res://assets/textures/gui/check_box_unchecked.png" type="Texture" id=9]
 [ext_resource path="res://assets/styles/style_check_box_focus.tres" type="StyleBox" id=10]
+[ext_resource path="res://assets/styles/style_h_separator.tres" type="StyleBox" id=17]
+[ext_resource path="res://assets/styles/style_v_separator.tres" type="StyleBox" id=18]
 
 [resource]
 default_font = ExtResource( 1 )
@@ -42,4 +44,8 @@ CheckBox/styles/hover = null
 CheckBox/styles/hover_pressed = null
 CheckBox/styles/normal = null
 CheckBox/styles/pressed = null
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = ExtResource( 17 )
 PanelContainer/styles/panel = ExtResource( 7 )
+VSeparator/constants/separation = 4
+VSeparator/styles/separator = ExtResource( 18 )
