@@ -11,4 +11,5 @@ path_spring_arm = NodePath("SpringArm")
 collision_mask = 0
 
 [node name="Camera" type="Camera" parent="SpringArm"]
+near = 1.0
 far = 65536.0
