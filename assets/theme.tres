@@ -12,6 +12,9 @@
 [ext_resource path="res://assets/styles/style_check_box_focus.tres" type="StyleBox" id=10]
 [ext_resource path="res://assets/styles/style_h_separator.tres" type="StyleBox" id=17]
 [ext_resource path="res://assets/styles/style_v_separator.tres" type="StyleBox" id=18]
+[ext_resource path="res://assets/styles/style_line_edit_focus.tres" type="StyleBox" id=20]
+[ext_resource path="res://assets/styles/style_line_edit_normal.tres" type="StyleBox" id=21]
+[ext_resource path="res://assets/styles/style_line_edit_read_only.tres" type="StyleBox" id=22]
 
 [resource]
 default_font = ExtResource( 1 )
@@ -46,6 +49,19 @@ CheckBox/styles/normal = null
 CheckBox/styles/pressed = null
 HSeparator/constants/separation = 4
 HSeparator/styles/separator = ExtResource( 17 )
+LineEdit/colors/clear_button_color = Color( 0.972549, 0.976471, 0.980392, 1 )
+LineEdit/colors/clear_button_color_pressed = Color( 0.972549, 0.976471, 0.980392, 1 )
+LineEdit/colors/cursor_color = Color( 0.972549, 0.976471, 0.980392, 1 )
+LineEdit/colors/font_color = Color( 0.972549, 0.976471, 0.980392, 1 )
+LineEdit/colors/font_color_selected = Color( 0.129412, 0.145098, 0.160784, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0.203922, 0.227451, 0.25098, 1 )
+LineEdit/colors/selection_color = Color( 0.972549, 0.976471, 0.980392, 1 )
+LineEdit/constants/minimum_spaces = 8
+LineEdit/fonts/font = null
+LineEdit/icons/clear = null
+LineEdit/styles/focus = ExtResource( 20 )
+LineEdit/styles/normal = ExtResource( 21 )
+LineEdit/styles/read_only = ExtResource( 22 )
 PanelContainer/styles/panel = ExtResource( 7 )
 VSeparator/constants/separation = 4
 VSeparator/styles/separator = ExtResource( 18 )
