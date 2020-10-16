@@ -80,7 +80,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if target:
-		transform.origin = target.transform.origin
+		global_transform.origin = target.global_transform.origin
 	else:
 		translate(movement_direction * movement_speed * delta)
 	_rotate_horizontally(rotation_angle_target_horizontal, delta)
