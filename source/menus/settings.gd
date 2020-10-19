@@ -31,6 +31,8 @@ func _ready() -> void:
 	check_box_borderless.pressed = OS.window_borderless
 	check_box_fullscreen.pressed = OS.window_fullscreen
 	check_box_vertical_synchronization.pressed = OS.vsync_enabled
+	line_edit_rendering_height.text = str(OS.window_size.y)
+	line_edit_rendering_width.text = str(OS.window_size.x)
 	line_edit_window_height.text = str(OS.window_size.y)
 	line_edit_window_width.text = str(OS.window_size.x)
 	_add_msaa_options(option_button_msaa)
