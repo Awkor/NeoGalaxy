@@ -1,20 +1,29 @@
 class_name ChunkGrid
 extends Spatial
 
-var chunks := []
-var size := 16
+signal chunk_added(chunk)
+
+var chunks := {}
 
 
-func _init() -> void:
-	for x in range(size):
-		chunks.append([])
-		for y in range(size):
-			chunks[x].append([])
-			for z in range(size):
-				var chunk := Chunk.new()
-				chunk.set_coordinate(x, y, z)
-				chunk.translation.x = x * chunk.SIZE
-				chunk.translation.y = y * chunk.SIZE
-				chunk.translation.z = z * chunk.SIZE
-				chunks[x][y].append(chunk)
-				add_child(chunk)
+func add_chunk_at(coordinate: ChunkCoordinate) -> Chunk:
+	var key := Chunk.key(coordinate)
+	var chunk_exists := chunks.has(key)
+	assert(chunk_exists == false)
+	var chunk := Chunk.new()
+	chunk.setup(coordinate)
+	chunks[key] = chunk
+	chunk.name = key
+	add_child(chunk)
+	emit_signal("chunk_added", chunk)
+	return chunk
+
+
+func get_chunk_at(coordinate: ChunkCoordinate) -> Chunk:
+	var key := Chunk.key(coordinate)
+	var chunk: Chunk = chunks[key] if chunks.has(key) else null
+	return chunk
+
+
+func set_chunk_as_origin(chunk: Chunk) -> void:
+	translation = -chunk.translation

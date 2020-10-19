@@ -5,17 +5,12 @@ const SIZE = pow(2.0, 16.0)
 
 var coordinate: ChunkCoordinate
 
+static func key(coordinate: ChunkCoordinate) -> String:
+	return "(%d, %d, %d)" % [coordinate.x, coordinate.y, coordinate.z]
 
-func set_coordinate(x: int, y: int, z: int) -> void:
-	coordinate = ChunkCoordinate.new(x, y, z)
 
-
-class ChunkCoordinate:
-	var x: int
-	var y: int
-	var z: int
-
-	func _init(x: int, y: int, z: int) -> void:
-		self.x = x
-		self.y = y
-		self.z = z
+func setup(coordinate: ChunkCoordinate) -> void:
+	self.coordinate = coordinate
+	translation.x = coordinate.x * SIZE
+	translation.y = coordinate.y * SIZE
+	translation.z = coordinate.z * SIZE
