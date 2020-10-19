@@ -228,6 +228,7 @@ margin_right = 44.0
 margin_bottom = 24.0
 align = 1
 max_length = 4
+editable = false
 context_menu_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -246,6 +247,7 @@ margin_right = 103.0
 margin_bottom = 24.0
 align = 1
 max_length = 4
+editable = false
 context_menu_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
