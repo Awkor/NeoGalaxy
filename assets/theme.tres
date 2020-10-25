@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=2]
+[gd_resource type="Theme" load_steps=23 format=2]
 
 [ext_resource path="res://assets/fonts/inter_regular.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/styles/style_button_disabled.tres" type="StyleBox" id=2]
@@ -10,10 +10,12 @@
 [ext_resource path="res://assets/textures/gui/check_box_checked.png" type="Texture" id=8]
 [ext_resource path="res://assets/textures/gui/check_box_unchecked.png" type="Texture" id=9]
 [ext_resource path="res://assets/styles/style_check_box_focus.tres" type="StyleBox" id=10]
+[ext_resource path="res://assets/styles/style_popup_menu_panel.tres" type="StyleBox" id=11]
 [ext_resource path="res://assets/styles/style_option_button_hover.tres" type="StyleBox" id=12]
 [ext_resource path="res://assets/styles/style_option_button_disabled.tres" type="StyleBox" id=13]
 [ext_resource path="res://assets/styles/style_option_button_pressed.tres" type="StyleBox" id=14]
 [ext_resource path="res://assets/styles/style_option_button_normal.tres" type="StyleBox" id=15]
+[ext_resource path="res://assets/styles/style_popup_menu_focus.tres" type="StyleBox" id=16]
 [ext_resource path="res://assets/styles/style_h_separator.tres" type="StyleBox" id=17]
 [ext_resource path="res://assets/styles/style_v_separator.tres" type="StyleBox" id=18]
 [ext_resource path="res://assets/styles/style_option_button_focus.tres" type="StyleBox" id=19]
@@ -81,5 +83,23 @@ OptionButton/styles/hover = ExtResource( 12 )
 OptionButton/styles/normal = ExtResource( 15 )
 OptionButton/styles/pressed = ExtResource( 14 )
 PanelContainer/styles/panel = ExtResource( 7 )
+PopupMenu/colors/font_color = Color( 0.972549, 0.976471, 0.980392, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.972549, 0.976471, 0.980392, 1 )
+PopupMenu/colors/font_color_disabled = Color( 0.203922, 0.227451, 0.25098, 1 )
+PopupMenu/colors/font_color_hover = Color( 0.972549, 0.976471, 0.980392, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 12
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = ExtResource( 16 )
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = ExtResource( 11 )
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
 VSeparator/constants/separation = 4
 VSeparator/styles/separator = ExtResource( 18 )
