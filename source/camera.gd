@@ -3,6 +3,9 @@ extends Spatial
 export (NodePath) var path_camera
 export (NodePath) var path_spring_arm
 
+var camera_near := 1.0
+var camera_far := 2.0 * Chunk.SIZE
+
 var fov_change := 2.0
 var fov_default := 70.0
 var fov_maximum := 90.0
@@ -44,6 +47,11 @@ onready var spring_arm_length_target := spring_arm.spring_length
 
 onready var rotation_angle_target_horizontal := spring_arm.rotation.x
 onready var rotation_angle_target_vertical := rotation.y
+
+
+func _ready() -> void:
+	camera.near = camera_near
+	camera.far = camera_far
 
 
 func _unhandled_input(event: InputEvent) -> void:
