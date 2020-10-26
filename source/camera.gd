@@ -4,7 +4,7 @@ export (NodePath) var path_camera
 export (NodePath) var path_spring_arm
 
 var camera_near := 1.0
-var camera_far := 2.0 * Chunk.SIZE
+var camera_far := Chunk.SIZE * 2.0
 
 var fov_change := 2.0
 var fov_default := 70.0
