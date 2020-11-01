@@ -2,6 +2,7 @@ class_name ChunkGrid
 extends Spatial
 
 signal chunk_added(chunk)
+signal origin_changed
 
 var chunks := {}
 
@@ -27,3 +28,4 @@ func get_chunk_at(coordinate: ChunkCoordinate) -> Chunk:
 
 func set_chunk_as_origin(chunk: Chunk) -> void:
 	translation = -chunk.translation
+	emit_signal("origin_changed")
