@@ -10,7 +10,7 @@ onready var button_settings := get_node(path_button_settings)
 
 onready var settings_menu: PackedScene = preload("res://scenes/menus/settings.tscn")
 onready var scene: PackedScene = load("res://scenes/tests/chunk_grid.tscn")
-onready var tree := get_tree()
+onready var scene_tree := get_tree()
 
 
 func _ready() -> void:
@@ -20,12 +20,12 @@ func _ready() -> void:
 
 
 func _on_ButtonPlay_pressed() -> void:
-	tree.change_scene_to(scene)
+	scene_tree.change_scene_to(scene)
 
 
 func _on_ButtonQuit_pressed() -> void:
-	tree.quit()
+	scene_tree.quit()
 
 
 func _on_ButtonSettings_pressed() -> void:
-	tree.change_scene_to(settings_menu)
+	scene_tree.change_scene_to(settings_menu)

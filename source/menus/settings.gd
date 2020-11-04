@@ -23,6 +23,7 @@ onready var line_edit_window_width := get_node(path_line_edit_window_width)
 onready var option_button_msaa := get_node(path_option_button_msaa)
 
 onready var main_menu := load("res://scenes/menus/main.tscn")
+onready var scene_tree := get_tree()
 
 
 func _ready() -> void:
@@ -55,4 +56,4 @@ func _on_ButtonApply_pressed() -> void:
 
 
 func _on_ButtonBack_pressed() -> void:
-	get_tree().change_scene_to(main_menu)
+	scene_tree.change_scene_to(main_menu)
