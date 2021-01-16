@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Capacitor",
+"language": "GDScript",
+"path": "res://source/capacitor.gd"
+}, {
 "base": "Spatial",
 "class": "Chunk",
 "language": "GDScript",
@@ -45,6 +50,7 @@ _global_script_classes=[ {
 "path": "res://source/gui/window.gd"
 } ]
 _global_script_class_icons={
+"Capacitor": "",
 "Chunk": "",
 "ChunkAssigner": "",
 "ChunkCoordinate": "",
