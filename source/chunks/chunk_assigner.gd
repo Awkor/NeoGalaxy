@@ -1,5 +1,5 @@
 class_name ChunkAssigner
-extends Spatial
+extends Node
 
 const MAXIMUM_TRANSLATION := Chunk.SIZE / 2
 
