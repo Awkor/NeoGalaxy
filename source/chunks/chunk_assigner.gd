@@ -13,32 +13,38 @@ func _physics_process(delta: float) -> void:
 	for chunk in chunks:
 		var chunk_children: Array = chunk.get_children()
 		for child in chunk_children:
-			var coordinate_delta := Vector3.ZERO
-			var translation_ratio: Vector3 = child.translation / MAXIMUM_TRANSLATION
-			if translation_ratio.x > 1.0:
-				coordinate_delta += Vector3.RIGHT
-			elif translation_ratio.x < -1.0:
-				coordinate_delta += Vector3.LEFT
-			if translation_ratio.y > 1.0:
-				coordinate_delta += Vector3.UP
-			elif translation_ratio.y < -1.0:
-				coordinate_delta += Vector3.DOWN
-			if translation_ratio.z > 1.0:
-				coordinate_delta += Vector3.BACK
-			elif translation_ratio.z < -1.0:
-				coordinate_delta += Vector3.FORWARD
-			if coordinate_delta != Vector3.ZERO:
-				var target_coordinate := ChunkCoordinate.new(
-					chunk.coordinate.x + coordinate_delta.x,
-					chunk.coordinate.y + coordinate_delta.y,
-					chunk.coordinate.z + coordinate_delta.z
-				)
-				var target_chunk := chunk_grid.get_chunk_at(target_coordinate)
-				if target_chunk == null:
-					target_chunk = chunk_grid.add_chunk_at(target_coordinate)
-				chunk.remove_child(child)
-				child.translation -= coordinate_delta * Chunk.SIZE
-				target_chunk.add_child(child)
+			var coordinate_delta = _get_coordinate_delta(child.translation)
+			if coordinate_delta == Vector3.ZERO:
+				continue
+			var target_coordinate := ChunkCoordinate.new(
+				chunk.coordinate.x + coordinate_delta.x,
+				chunk.coordinate.y + coordinate_delta.y,
+				chunk.coordinate.z + coordinate_delta.z
+			)
+			var target_chunk := chunk_grid.get_chunk_at(target_coordinate)
+			if target_chunk == null:
+				target_chunk = chunk_grid.add_chunk_at(target_coordinate)
+			chunk.remove_child(child)
+			child.translation -= coordinate_delta * Chunk.SIZE
+			target_chunk.add_child(child)
+
+
+func _get_coordinate_delta(translation: Vector3) -> Vector3:
+	var translation_ratio: Vector3 = translation / MAXIMUM_TRANSLATION
+	var coordinate_delta := Vector3.ZERO
+	if translation_ratio.x > 1.0:
+		coordinate_delta += Vector3.RIGHT
+	elif translation_ratio.x < -1.0:
+		coordinate_delta += Vector3.LEFT
+	if translation_ratio.y > 1.0:
+		coordinate_delta += Vector3.UP
+	elif translation_ratio.y < -1.0:
+		coordinate_delta += Vector3.DOWN
+	if translation_ratio.z > 1.0:
+		coordinate_delta += Vector3.BACK
+	elif translation_ratio.z < -1.0:
+		coordinate_delta += Vector3.FORWARD
+	return coordinate_delta
 
 
 func add_node_to_grid(node: Node, coordinate: ChunkCoordinate) -> void:
