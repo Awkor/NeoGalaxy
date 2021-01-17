@@ -46,7 +46,8 @@ func _notification(what: int) -> void:
 
 
 func _reparent_children() -> void:
-	for child in get_children():
+	var children := get_children()
+	for child in children:
 		match child:
 			margin_container_bottom:
 				pass
