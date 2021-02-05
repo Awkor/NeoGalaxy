@@ -47,7 +47,7 @@ margin_right = 148.0
 margin_bottom = 52.0
 text = "Fullscreen"
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HSeparatorTop" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 56.0
 margin_right = 148.0
 margin_bottom = 60.0
@@ -107,7 +107,7 @@ align = 1
 max_length = 4
 context_menu_enabled = false
 
-[node name="HSeparator2" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HSeparatorBottom" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 100.0
 margin_right = 148.0
 margin_bottom = 104.0
