@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://source/menus/settings/rendering.gd" type="Script" id=1]
+[ext_resource path="res://source/gui/titled_panel_container.gd" type="Script" id=2]
 
 [node name="CenterContainer" type="CenterContainer"]
 anchor_right = 1.0
@@ -11,47 +12,47 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-path_button_apply = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/ButtonApply")
-path_button_back = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/ButtonBack")
-path_check_box_vertical_synchronization = NodePath("PanelContainer/MarginContainer/VBoxContainer/CheckBoxVerticalSynchronization")
-path_line_edit_rendering_height = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution/LineEditHeight")
-path_line_edit_rendering_width = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution/LineEditWidth")
-path_option_button_msaa = NodePath("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/OptionButtonMsaa")
+path_button_apply = NodePath("VBoxContainer/TitledPanelContainer/VBoxContainer/HBoxContainer/ButtonApply")
+path_button_back = NodePath("VBoxContainer/TitledPanelContainer/VBoxContainer/HBoxContainer/ButtonBack")
+path_check_box_vertical_synchronization = NodePath("VBoxContainer/TitledPanelContainer/VBoxContainer/CheckBoxVerticalSynchronization")
+path_line_edit_rendering_height = NodePath("VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution/LineEditHeight")
+path_line_edit_rendering_width = NodePath("VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution/LineEditWidth")
+path_option_button_msaa = NodePath("VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/OptionButtonMsaa")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-margin_left = 540.0
-margin_top = 284.0
-margin_right = 740.0
-margin_bottom = 436.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 544.0
+margin_top = 288.0
+margin_right = 736.0
+margin_bottom = 432.0
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="TitledPanelContainer" type="PanelContainer" parent="VBoxContainer"]
+margin_right = 192.0
+margin_bottom = 144.0
+script = ExtResource( 2 )
+title = "Rendering Settings"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TitledPanelContainer"]
 margin_left = 1.0
 margin_top = 1.0
-margin_right = 199.0
-margin_bottom = 151.0
+margin_right = 191.0
+margin_bottom = 143.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 194.0
-margin_bottom = 146.0
-
-[node name="CheckBoxVerticalSynchronization" type="CheckBox" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="CheckBoxVerticalSynchronization" type="CheckBox" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_right = 190.0
 margin_bottom = 24.0
 text = "Vertical Synchronization"
 
-[node name="HSeparatorTop" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HSeparatorTop" type="HSeparator" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_top = 28.0
 margin_right = 190.0
 margin_bottom = 32.0
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 190.0
 margin_bottom = 100.0
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer"]
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 186.0
@@ -59,51 +60,51 @@ margin_bottom = 60.0
 custom_constants/vseparation = 8
 columns = 2
 
-[node name="HBoxContainerMsaa" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="HBoxContainerMsaa" type="HBoxContainer" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer"]
 margin_right = 75.0
 margin_bottom = 24.0
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerMsaa"]
+[node name="Label" type="Label" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerMsaa"]
 margin_top = 5.0
 margin_right = 37.0
 margin_bottom = 19.0
 text = "MSAA"
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerMsaa"]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerMsaa"]
 margin_left = 41.0
 margin_right = 75.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 
-[node name="OptionButtonMsaa" type="OptionButton" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="OptionButtonMsaa" type="OptionButton" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer"]
 margin_left = 79.0
 margin_right = 182.0
 margin_bottom = 24.0
 
-[node name="HBoxContainerResolutionLabel" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="HBoxContainerResolutionLabel" type="HBoxContainer" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer"]
 margin_top = 32.0
 margin_right = 75.0
 margin_bottom = 56.0
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolutionLabel"]
+[node name="Label" type="Label" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolutionLabel"]
 margin_top = 5.0
 margin_right = 68.0
 margin_bottom = 19.0
 text = "Resolution"
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolutionLabel"]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolutionLabel"]
 margin_left = 72.0
 margin_right = 75.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 
-[node name="HBoxContainerResolution" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="HBoxContainerResolution" type="HBoxContainer" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer"]
 margin_left = 79.0
 margin_top = 32.0
 margin_right = 182.0
 margin_bottom = 56.0
 
-[node name="LineEditWidth" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution"]
+[node name="LineEditWidth" type="LineEdit" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution"]
 margin_right = 44.0
 margin_bottom = 24.0
 align = 1
@@ -111,14 +112,14 @@ max_length = 4
 editable = false
 context_menu_enabled = false
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution"]
+[node name="Label" type="Label" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution"]
 margin_left = 48.0
 margin_top = 5.0
 margin_right = 55.0
 margin_bottom = 19.0
 text = "x"
 
-[node name="LineEditHeight" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution"]
+[node name="LineEditHeight" type="LineEdit" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/MarginContainer/GridContainer/HBoxContainerResolution"]
 margin_left = 59.0
 margin_right = 103.0
 margin_bottom = 24.0
@@ -127,23 +128,23 @@ max_length = 4
 editable = false
 context_menu_enabled = false
 
-[node name="HSeparatorBottom" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HSeparatorBottom" type="HSeparator" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_top = 104.0
 margin_right = 190.0
 margin_bottom = 108.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_top = 112.0
 margin_right = 190.0
 margin_bottom = 142.0
 
-[node name="ButtonBack" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ButtonBack" type="Button" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/HBoxContainer"]
 margin_right = 93.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
 text = "Back"
 
-[node name="ButtonApply" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ButtonApply" type="Button" parent="VBoxContainer/TitledPanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 97.0
 margin_right = 190.0
 margin_bottom = 30.0

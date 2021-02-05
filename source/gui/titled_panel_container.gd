@@ -23,6 +23,10 @@ func _ready():
 	margin_container_bottom.set("custom_constants/margin_left", content_margin)
 	margin_container_bottom.set("custom_constants/margin_right", content_margin)
 	margin_container_bottom.set("custom_constants/margin_top", content_margin)
+	margin_container_top.set("custom_constants/margin_bottom", 0)
+	margin_container_top.set("custom_constants/margin_left", 0)
+	margin_container_top.set("custom_constants/margin_right", 0)
+	margin_container_top.set("custom_constants/margin_top", 0)
 	title_background.color = style.border_color
 	title_label.size_flags_horizontal |= SIZE_EXPAND
 	title_label.text = title
