@@ -7,6 +7,8 @@ export (NodePath) var chunk_grid_path
 
 onready var chunk_grid: ChunkGrid = get_node(chunk_grid_path)
 
+var origin_setter: Spatial
+
 
 func _physics_process(delta: float) -> void:
 	var chunks: Array = chunk_grid.get_children()
@@ -27,6 +29,8 @@ func _physics_process(delta: float) -> void:
 			chunk.remove_child(child)
 			child.translation -= coordinate_delta * Chunk.SIZE
 			target_chunk.add_child(child)
+			if child == origin_setter:
+				chunk_grid.set_chunk_as_origin(target_chunk)
 
 
 func _get_coordinate_delta(translation: Vector3) -> Vector3:
