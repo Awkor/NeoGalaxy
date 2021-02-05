@@ -1,5 +1,5 @@
-extends Node
 class_name Turret
+extends Node
 
 signal fired(target)
 signal reloaded
