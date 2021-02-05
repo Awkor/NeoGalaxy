@@ -40,19 +40,19 @@ margin_bottom = 30.0
 disabled = true
 text = "Audio"
 
-[node name="ButtonInterface" type="Button" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
+[node name="ButtonGameplay" type="Button" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_top = 34.0
 margin_right = 80.0
 margin_bottom = 64.0
 disabled = true
-text = "Interface"
+text = "Gameplay"
 
-[node name="ButtonGameplay" type="Button" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
+[node name="ButtonInterface" type="Button" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_top = 68.0
 margin_right = 80.0
 margin_bottom = 98.0
 disabled = true
-text = "Gameplay"
+text = "Interface"
 
 [node name="ButtonRendering" type="Button" parent="VBoxContainer/TitledPanelContainer/VBoxContainer"]
 margin_top = 102.0
